@@ -1,4 +1,4 @@
-import type { Types } from '@cornerstonejs/core';
+import type { Surface, Types } from '@cornerstonejs/core';
 import {
   cache,
   getEnabledElementByViewportId,
@@ -104,7 +104,7 @@ async function render(
       );
       return;
     }
-    const segmentIndex = geometry.data.segmentIndex;
+    const segmentIndex = (geometry.data as Surface).segmentIndex;
 
     const surface = geometry.data as Types.ISurface;
 
